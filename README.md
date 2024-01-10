@@ -10,5 +10,5 @@ Antes de correr el backend se deben instalar dependencias 🔨⚙️:
 
 para inicar backend ⚙️:
 1-en otra consola (ctrl + ñ)
-2-en carpeta principal C:\Users\andyg\Documents\Django\E-commerce> 
+2-en carpeta principal 
 3- python manage.py runserver
