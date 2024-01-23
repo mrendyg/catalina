@@ -105,7 +105,7 @@ const Header = () => {
                           to={'/cate'}
                           className='text-black  text-center self-center p-2 px-4 rounded-lg hover:bg-slate-400 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
                         >
-                          Categorias
+                          Marca
                         </Link>
                       </>
 

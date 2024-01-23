@@ -38,6 +38,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = []
 
     class Meta:
+        db_table = "User"
         ordering = ["-date_joined"]
 
 
