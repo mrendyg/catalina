@@ -19,15 +19,14 @@ class Modelo(models.Model):
         db_table = 'Modelo'
 
 class Producto(models.Model):
-    codigo = models.CharField(max_length=50, unique=True)
-    nombre = models.CharField(max_length=50, unique=True)
+    codigo = models.CharField(max_length=100, unique=True)
+    nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=200, null=True, blank=True)
     precio = models.DecimalField(max_digits=10, decimal_places=0)
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
-    modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE)
+    #modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE)
     cantidad_stock = models.IntegerField(null=True, blank=True, default=0)
-    usuario = models.ForeignKey(User, default=(5), on_delete=models.CASCADE)  # Relación con el usuario
-    imagen = models.ImageField(upload_to='./media/imagen_products/', null=True, blank=True)
+    imagen = models.ImageField(upload_to='./media/5596.jpg', null=True, blank=True)
     
     class Meta:
         db_table = 'Producto'
