@@ -13,6 +13,7 @@ class Modelo(models.Model):
     nombre = models.CharField(max_length=50, unique=True)
     tipo = models.CharField(max_length=50, null=True)
     anio = models.IntegerField(null=True, blank=True)
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
 
 
     class Meta:
