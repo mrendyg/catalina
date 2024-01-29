@@ -13,7 +13,7 @@ const EditProduct = () => {
 
     const [nombre, setName] = useState<string>('');
     const [cantidad_stock, setCountInStock] = useState<number>(0);
-    const [categoria, setCategory] = useState<string>('');
+    const [marca, setCategory] = useState<string>('');
     const [descripcion, setDescription] = useState<string>('');
     const [precio, setPrice] = useState<number>(0);
     const [imagen, setImage] = useState<File | null>(null);
@@ -42,7 +42,7 @@ const EditProduct = () => {
             console.log("esto es " + data.nombre)
             setName(data.nombre);
             setCountInStock(data.cantidad_stock);
-            setCategory(data.categoria);
+            setCategory(data.marca);
             setPrice(data.precio);
             setDescription(data.descripcion);
             setImage(data.imagen);
@@ -74,7 +74,7 @@ const EditProduct = () => {
             id: prodId,
             nombre: nombre, 
             cantidad_stock: cantidad_stock, 
-            categoria: categoria, 
+            marca: marca, 
             descripcion: descripcion, 
             precio: precio, 
             imagen: imagen
@@ -181,7 +181,7 @@ return (
     <div>
     <label htmlFor="category" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria</label>
     <input 
-        value={categoria}
+        value={marca}
         onChange={handleCategoryChange}
         type="text" name="category" id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Category"/>
     </div>

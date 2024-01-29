@@ -4,7 +4,7 @@ export interface Product {
     descripcion: string
     precio: number
     cantidad?: number
-    categoria: string
+    marca: string
     cantidad_stock: number
     usuario?: number
     imagen: File | null;

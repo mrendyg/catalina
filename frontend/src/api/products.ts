@@ -7,8 +7,8 @@ export const search_prod = async (nombre: string) => {
   return res.data
 }*/
 
-export const cate_api = async (category: string) =>{
-  const response = await authApi.get(`/products/cate/${category}/`)
+export const cate_api = async (marca: string) =>{
+  const response = await authApi.get(`/products/cate/${marca}/`)
   return response.data
 }
 
@@ -47,7 +47,7 @@ export const putProduct = async (data: Product) => {
   formData.append("nombre", data.nombre);
   formData.append("descripcion", data.descripcion);
   formData.append("cantidad_stock", data.cantidad_stock.toString());
-  formData.append("categoria", data.categoria);
+  formData.append("marca", data.marca);
   formData.append("precio", data.precio.toString());
   if (data.imagen && typeof data.imagen !== "string") {
     formData.append("imagen", data.imagen);
@@ -60,7 +60,7 @@ export const postProduct = async (data: Product) => {
   formData.append("nombre", data.nombre);
   formData.append("descripcion", data.descripcion);
   formData.append("cantidad_stock", data.cantidad_stock.toString());
-  formData.append("categoria", data.categoria);
+  formData.append("marca", data.marca);
   formData.append("precio", data.precio.toString());
   if (data.imagen) {
     formData.append("imagen", data.imagen);
